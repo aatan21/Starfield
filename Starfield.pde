@@ -1,19 +1,29 @@
-Particle[] many = new Particle[150];
+Particle jit;
 void setup()
 {
   size(600,600);
+  noStroke();
+  jit = new Particle();
 }
 void draw()
 {
-  //your code here
+  background(0);
+  
 }
 class Particle
 {
-  int myX, myY, myC, myS;
+  double myX, myY, myA, myS;
+  int myC;
   Particle(){
    myX = width/2;
    myY = height/2;
-   myC = 
+   myC = color(255, 255, 255);
+   myS = (int)(Math.random() * 2) + 8;
+   myA = (int)(Math.random() * 361);
+  }
+  void move(){
+    myX += myS;
+    
   }
 }
 
@@ -21,5 +31,4 @@ class OddballParticle //inherits from Particle
 {
   //your code here
 }
-
 
